@@ -7,12 +7,12 @@
 
 int main(){
   std::string line;
-  std::ifstream data("daten.txt");
-  std::ofstream sum("datensumme.txt");
+  std::ifstream daten("daten.txt");
+  std::ofstream datensumme("datensumme.txt");
 
-  while (getline(data, line)){
+  while (getline(daten, line)){
     datensumme << line[0] + line[2] << std::endl;
   }
-  data.close();
-  sum.close();
+  daten.close();
+  datensumme.close();
 }
