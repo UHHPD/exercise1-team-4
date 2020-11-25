@@ -5,6 +5,7 @@
 
 using namespace std; 
 
+// Ask Tobi or Hartmut about it:
 double mean(ifstream & data){
   double sum, mean, a;
   for(int i = 0; i < 26; i++)
