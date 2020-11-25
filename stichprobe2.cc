@@ -5,7 +5,19 @@
 
 using namespace std; 
 
-// float compute_mean(){ ... ; return mean;  }
+// Ask Tobi or Hartmut about it:
+double compute_mean(ifstream & data)
+{
+  double sum, mean, a;
+  for(int i = 0; i < 26; i++)
+  {
+    data >> a;
+    sum += a;
+  }
+  mean = sum/26; 
+  
+  return mean; 
+}
 
 int main(){
   double a, sum, variance, mean;
@@ -45,4 +57,13 @@ int main(){
     cout << "Stdev: " << sqrt(variance) << endl;
   }
 
+
+  ifstream data3("mittelwerte.txt");
+  ifstream data4("varianzen.txt");
+
+  cout <<  "Mean of means: " << compute_mean(data3) << endl;
+
+  cout <<  "Mean of variances: " << compute_mean(data4) << endl;
+
+  // data.seekg(0, data.beg);
 }
